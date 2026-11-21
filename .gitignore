@@ -1,0 +1,32 @@
+# Node modules and build
+node_modules/
+dist/
+build/
+.vite/
+
+# Python virtual environment & cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Environment files containing secrets
+.env
+*.env.local
+*.env.*.local
+backend/.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+*.log
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+

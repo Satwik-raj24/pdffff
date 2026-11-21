@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #0d0e12;
+  color: #f3f4f6;
+  overflow: hidden;
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #272b38;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b4154;
+}
+
+/* Markdown prose enhancements */
+.prose-dark {
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  line-height: 1.68;
+}
+
+.prose-dark h1,
+.prose-dark h2,
+.prose-dark h3,
+.prose-dark h4 {
+  color: #f9fafb;
+  font-weight: 600;
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+  letter-spacing: -0.015em;
+}
+
+.prose-dark h1 { font-size: 1.35rem; }
+.prose-dark h2 { font-size: 1.2rem; }
+.prose-dark h3 { font-size: 1.05rem; }
+
+.prose-dark p {
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+}
+
+.prose-dark ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.prose-dark ol {
+  list-style-type: decimal;
+  padding-left: 1.25rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.prose-dark li {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.prose-dark strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.prose-dark code {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #171922;
+  border: 1px solid #272b38;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+  font-size: 0.85em;
+  color: #34d399;
+}
+
+.prose-dark pre {
+  background-color: #12141a;
+  border: 1px solid #272b38;
+  border-radius: 0.5rem;
+  padding: 0.85rem 1rem;
+  overflow-x: auto;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+.prose-dark pre code {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #e5e7eb;
+}
+
+.prose-dark table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 0.9em;
+}
+
+.prose-dark th {
+  border-bottom: 1px solid #374151;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  color: #f3f4f6;
+  background-color: #161820;
+}
+
+.prose-dark td {
+  border-bottom: 1px solid #272b38;
+  padding: 0.5rem 0.75rem;
+  color: #d1d5db;
+}
+
+.prose-dark blockquote {
+  border-left: 3px solid #10b981;
+  padding-left: 0.85rem;
+  margin-left: 0;
+  color: #9ca3af;
+  font-style: italic;
+}
+
