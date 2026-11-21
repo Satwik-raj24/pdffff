@@ -601,7 +601,12 @@ if os.path.exists(frontend_dist):
 
 if __name__ == "__main__":
     import uvicorn
-    host = os.getenv("HOST", "127.0.0.1")
-    port = int(os.getenv("PORT", "8000"))
+    # On Render/Cloud containers, bind to 0.0.0.0 and use Render's PORT
+    is_cloud = bool(os.getenv("RENDER") or os.getenv("RAILWAY_ENVIRONMENT") or os.getenv("PORT"))
+    default_host = "0.0.0.0" if is_cloud else "127.0.0.1"
+    default_port = 10000 if os.getenv("RENDER") else 8000
+
+    host = os.getenv("HOST", default_host)
+    port = int(os.getenv("PORT", str(default_port)))
     logger.info(f"Starting Smart Notes AI server at http://{host}:{port}")
     uvicorn.run("main:app", host=host, port=port, reload=False)
